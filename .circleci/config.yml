@@ -5,7 +5,7 @@ notify:
     #- url: reviewee url
 jobs:
   build:
-    working_directory: ~/laravel-boilerplate
+    working_directory: ~/web-boilerplate
     docker:
       - image: svikramjeet/php7.4
       - image: postgres:12.3-alpine
