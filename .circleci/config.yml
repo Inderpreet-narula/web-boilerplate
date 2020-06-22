@@ -12,14 +12,9 @@ jobs:
         environment:
           POSTGRES_PASSWORD: postgres      
     environment:
-      - CIRCLE_PROJECT_REPONAME: laravel-boilerplate
-      - REVIEWEE_URL: reviewee url
-      - COMMITS_CHECK_ENDPOINT:  repository/laravel-boilerplate/haveRejectedCommits
+      - CIRCLE_PROJECT_REPONAME: web-boilerplate
       - COMMITS_CHECK_INDICATOR: \"success\":true
     steps:
-      - run:
-          name: Check rejected commits
-          command: wget ${REVIEWEE_URL}/${COMMITS_CHECK_ENDPOINT} -q -O - | grep -q ${COMMITS_CHECK_INDICATOR}
       - checkout
       - restore_cache:
           keys:
